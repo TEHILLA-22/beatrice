@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url(image/beat\ \(2\).png);
+      }
+      
+      .container {
+        display: flex;
+        width: 70%;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      
+      .form-container {
+        width: 50%;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f9f9f9;
+      }
+      
+      .form {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .form.active {
+        display: flex;
+      }
+      
+      .form h2 {
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+      
+      .form input {
+        margin-bottom: 1rem;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+      
+      .form button {
+        padding: 0.8rem;
+        border: none;
+        border-radius: 5px;
+        background: #007bff;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      
+      .form button:hover {
+        background: #0056b3;
+      }
+      
+      .text-container {
+        width: 50%;
+        padding: 2rem;
+        background: #007bff;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .text-box {
+        text-align: center;
+      }
+      
+      .text-box h2 {
+        margin-bottom: 1rem;
+      }
+      
+      .text-box p {
+        margin-bottom: 1.5rem;
+      }
+      
+      .text-box button {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        background: white;
+        color: #007bff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+      }
+      
+      .text-box button:hover {
+        background: #0056b3;
+        color: white;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <div class="form-box">
+        <!-- Login Form -->
+        <form id="loginForm" class="form active">
+          <h2>Login</h2>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signupForm" class="form">
+          <h2>Sign Up</h2>
+          <input type="text" placeholder="Full Name" required>
+          <input type="text" placeholder="surname" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="text-container">
+      <div class="text-box">
+        <h2>Welcome to Beatrice Fuck Club!</h2>
+        <p>Access exclusive features by logging in or signing up today.</p>
+        <button id="toggleButton">Switch to Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
